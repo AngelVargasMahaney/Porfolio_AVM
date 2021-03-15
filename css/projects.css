@@ -1,0 +1,420 @@
+*{
+    margin:0;
+    box-sizing:border-box;
+    padding:0;
+}
+
+body{
+    background-color: #013A6B;
+    background-image: -webkit-linear-gradient(30deg, #ffffffc0 50%, #19588f 50%);
+    font-family: sans-serif;
+    
+}
+
+
+.header {
+	height: 60px;
+    padding: 40px 0px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+    padding-right: 32px;
+    background-color: #063258;
+    
+}
+
+.header__info{
+    font-family: 'Akaya Telivigala', sans-serif;
+    font-size: 35px;
+    color: white;
+    margin: 0 155px;
+}
+
+.header__nav{
+    border: 1px solid #fefefed7;
+    padding: 20px;
+    background-color: rgba(240, 15, 15, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px #fefefe9a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__item {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: flex 0.3s ease;
+}
+.header__item:hover {
+	flex: 1.5;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+    border-color: #3d5a74;
+}
+.header__item.active {
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	flex: 1.5;
+    border-color: #fefefe;
+}
+
+.header__list{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+   
+   list-style: none;
+   
+}
+.header__link{
+    text-decoration: none;
+    color: #fefefeda;   
+    font-family: 'Akaya Telivigala', sans-serif;
+}
+
+
+.main{
+    
+    display: flex;
+    min-height: calc(100vh - 60px);
+    gap: 15px;
+  
+}
+.sidebar {
+	flex: 0.7;
+	border: 1px solid white;
+    /* background-color: rgba(134, 134, 134, 0.253); */
+    background-color: #3b6083;
+    box-shadow: 0px 0px 18px #aca8a8;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+	transition: all 0.3s linear; 
+    position: relative;
+}
+
+.main__container{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    margin-right: 15px;
+    background-color: rgba(172, 172, 172, 0.664);
+    box-shadow: 0px 0px 18px #3b6083;
+    
+}
+
+.personal__info > h2{
+    color: #fefefed2;
+}
+
+.personal__info > p,li{
+    font-size: 18px;
+    color: #dddddd;
+}
+
+.personal__info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  margin: 100px 0px;
+
+}
+h2{
+    font-family: 'Akaya Telivigala', sans-serif;
+    
+}
+
+.personal__info h2:nth-child(1):before{
+    content: "";
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f2a0"; 
+    margin: 0px 20px;
+}
+.personal__info h2:nth-child(3):before{
+    content: "";
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f1d8"; 
+    margin: 0px 20px;
+}
+.personal__info h2:nth-child(5):before{
+    content: "";
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0c0"; 
+    margin: 0px 20px;
+}
+
+.personal__info > ul > li{
+    list-style-type: none;
+    padding: 5px 0px;
+}
+.personal__info > ul > li::before{
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0e0";
+    margin: 0px 20px;
+}
+
+.personal__info figure a{
+    font-size: 28px;
+    padding: 0px 15px;
+    text-decoration: none;
+    color: #03192c;
+    transition: all 0.3s linear;
+    
+}
+.personal__info figure a:hover{
+    font-size: 48px;
+    box-shadow: 0px 0px 5px #e0dddd;
+    padding:10px 10px;
+    margin: 0px 25px;
+    background-color: rgba(165, 165, 165, 0.2);
+    color: #fefefe;
+    
+}
+
+.main__projects{
+ 
+    height: 750px;
+    border: 1px solid #c2c2c2;
+    width: 1250px;
+    border-radius: 20px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    
+    align-items: center;
+    flex-wrap: wrap;
+    
+    gap: 50px;
+    background-color: rgba(250, 242, 242, 0.76);
+}
+
+/* .project{
+    width: 300px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: red;
+} */
+
+
+.project {
+	background-color: rgba(95, 95, 95, 0.1);
+    border: 1px solid #b5c3c7;
+    box-shadow: 0px 0px 10px #063258;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	height: 280px;
+	width: 330px;
+    transition: all 0.3s linear;
+ 
+}
+.project > figcaption{
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Akaya Telivigala', sans-serif;
+}
+.project__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	overflow: hidden;
+	transition: height 0.3s linear;
+    
+}
+.project__image img {
+	max-width: 100%;
+    max-height: 100%;
+    padding-top: 15px;
+}
+
+.project:hover{
+    transform: scale(1.1);
+    font-size: 22px;
+    height: 300px;
+    margin-top: 20px;
+    color: rgba(40, 47, 65, 0.603);
+    text-shadow: 0 0 20px #1c353b, 0 0 40px #4b8b9b;
+}
+
+
+@media(max-width:1600px){
+    .main__container{
+        width: 600px;
+    }
+    .project{
+        height: 230px;
+	    width: 280px;
+    }
+    .main__projects{
+        margin: 0px 20px;
+    }
+}
+
+
+
+.footer{
+    height: 120px;
+    max-width: 100%;
+    background-color: #03192c;
+    color: #e0dddd;
+    font-size: 30px;
+    font-family: 'Akaya Telivigala', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s linear;
+    filter: blur(5px);
+}
+
+.footer > p{
+    position: absolute;
+    font-size: 30px;
+    right: 17%;
+    bottom: 5%;
+    
+}
+
+.footer:hover{
+    font-size:35px;
+    text-transform: uppercase;
+    filter: blur(0);
+}
+
+
+
+@media(max-width:1440px){
+    .main__container{
+        width: 600px;
+    }
+    .project{
+        height: 200px;
+	    width: 240px;
+    }
+    .main__projects{
+        padding: 0px 20px;
+        gap: 30px;
+    }
+    .project:hover{
+        transform: scale(1.02);
+        font-size: 18px;
+        height: 240px;
+    
+    }
+}
+
+@media(max-width:996px){
+
+    .main__container{
+        width:400px;
+    }
+    .project{
+        height: 180px;
+	    width: 190px;
+    }
+    .main__projects{
+        gap: 5px;
+    }
+}
+
+@media(max-width:860px){
+
+    .header__info{
+        display: none;
+    }
+    .main{
+        width: 450px;
+        display: flex;
+        margin: 0 auto;
+    }
+    .main__container{
+        width:350px;
+    }
+    .main__projects{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-items: left;
+        width: 500px;
+    }
+    .project{
+        height: 100px;
+	    width: 140px;
+       
+    }
+    .project figcaption{
+        display: none;
+    }
+    .project:hover{
+        transform: scale(1.05);
+        font-size: 22px;
+        height: 150px;
+        margin-top: 20px;
+        color: rgba(40, 47, 65, 0.603);
+        text-shadow: 0 0 20px #1c353b, 0 0 40px #4b8b9b;
+    }
+    
+    .project:nth-child(1):hover:after{
+        content: "Header y Estilos";
+        font-family: 'Akaya Telivigala', sans-serif;;
+        position: absolute;
+        right: -130%;
+        
+    }
+    .project:nth-child(2):hover:after{
+        content: "Card Responsivo";
+        font-family: 'Akaya Telivigala', sans-serif;;
+        position: absolute;
+        right: -130%;
+        
+    }
+    .project:nth-child(3):hover:after{
+        content: "Login y Registro";
+        font-family: 'Akaya Telivigala', sans-serif;;
+        position: absolute;
+        right: -130%;
+        
+    }
+    .project:nth-child(4):hover:after{
+        content: "Página con Estilos";
+        font-family: 'Akaya Telivigala', sans-serif;;
+        position: absolute;
+        right: -150%;
+        
+    }
+    .project:nth-child(5):hover:after{
+        content: "Sidebar Responsivo";
+        font-family: 'Akaya Telivigala', sans-serif;;
+        position: absolute;
+        right: -150%;
+        
+    }
+    
+    .header__info{
+        display: none;
+    }
+    .header__nav{
+     
+        margin: 0 auto;
+    }
+    .sidebar{
+        display: none;
+    }
+    .footer > em{
+        font-size: 20px;
+    }
+    .footer > p{
+        font-size: 15px;
+    }
+}

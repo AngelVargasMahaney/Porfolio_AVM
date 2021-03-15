@@ -1,0 +1,703 @@
+* {
+    margin:0;
+    box-sizing:border-box;
+    padding:0;
+}
+
+body{
+    background-color: #013A6B;
+    background-image: -webkit-linear-gradient(30deg, #ffffffc0 50%, #19588f 50%);
+    font-family: sans-serif;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+.wrapper {
+	max-width: 1920px;
+	margin: 0 auto;
+    min-height: calc(100vh - 60px);
+}
+.header {
+	height: 60px;
+    padding: 40px 0px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+    padding-right: 32px;
+    background-color: #063258;
+    
+}
+
+.header__info{
+    font-family: 'Akaya Telivigala', sans-serif;
+    font-size: 35px;
+    color: white;
+    margin: 0 210px;
+}
+
+.header__nav{
+    border: 1px solid #fefefed7;
+    padding: 20px;
+    background-color: rgba(240, 15, 15, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px #fefefe9a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__item {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: flex 0.3s ease;
+}
+.header__item:hover {
+	flex: 1.5;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+    border-color: #3d5a74;
+}
+.header__item.active {
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	flex: 1.5;
+    border-color: #fefefe;
+}
+
+.header__list{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+   list-style: none;
+   font-family: 'Akaya Telivigala', sans-serif;
+}
+.header__link{
+    text-decoration: none;
+    color: #fefefeda;   
+}
+
+
+
+
+.main{
+    
+    display: flex;
+    min-height: calc(100vh - 60px);
+    
+  
+}
+.sidebar {
+	flex: 0.7;
+	border: 1px solid white;
+    /* background-color: rgba(134, 134, 134, 0.253); */
+    background-color: #3b6083;
+    box-shadow: 0px 0px 18px #aca8a8;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+	transition: width 0.3s linear; 
+    position: relative;
+}
+.sidebar__profile > h1{
+    color: #fefefe;
+}
+.main__container{
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+   
+    
+}
+.titles{
+    position: absolute;
+    top: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    
+}
+.main__datos{
+ 
+    height: 450px;
+    border: 1px solid #c2c2c2;
+    width: 500px;
+    border-radius: 20px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    background-color: rgba(175, 171, 171, 0.753);
+    transition: width 0.7s linear;
+   
+}
+
+
+
+.titles > .title{
+    color: #fefefe;
+    font-family: 'Akaya Telivigala', sans-serif;    
+    text-shadow: 0 0 30px #00ccff, 0 0 50px #14a4c8;
+    font-size: 32px;
+
+}
+
+.title:nth-child(1){
+    margin-left: 7%;
+}    
+
+.title:nth-child(2){
+    margin-top: -15%;
+    margin-left: 7%;
+}
+.datos__info{
+    width: 390px;
+    height: 150px;
+    background-color:#ececec ;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px #bebebe;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+    padding-top: 17px;
+}
+
+
+
+.main__datos:nth-child(3){
+    background-color: rgba(175, 171, 171, 0.472);
+    height: 640px;
+    transition: width 0.5s linear;
+    
+}
+.main__datos:nth-child(3) > .datos__info{
+    /* width: 330px; */
+    width: 150px;
+    /* padding: 20px 10px; */
+    height: 570px;
+    
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-start; */
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    background-color:#6d7c86;
+    transition: all 0.5s linear;
+}
+.main__datos:nth-child(3) > .datos__info:hover{
+     align-items: flex-start; 
+       padding: 20px 30px;
+          width: 330px;
+          
+}
+.data{
+    
+    display: flex;
+}
+.data__info *{
+   
+    padding: 5px 10px;
+    padding-top: 5px;
+
+    text-align: center;
+}
+.info__logo{
+    padding: 10px 10px;
+    padding-top: 17px;
+   background-color: #BBB8B8;
+   border-radius: 18px;
+   box-shadow: 0px 0px 3px rgb(121, 116, 116);
+}
+.info__logo > img{
+    height: 72px;
+    width: 72px;
+}
+
+.skills{
+    text-align: center;
+    color: white;
+    /* margin-left: 20px; */
+    position: relative;
+    cursor: pointer;
+}
+@keyframes jump {
+    0%   { 
+        transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-15px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+.skills:hover{
+    animation-name: jump;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+ 
+}
+.skills::after{
+    content: "";
+    width: 0px;
+    height: 0px;
+    transition: all 0.5s linear;
+}
+
+.skills:hover::after{
+    position: absolute;
+    background-color: rgba(165, 199, 243, 0.5);
+    border: 1px solid #bdb4b4;
+    
+    left:74px;
+    top: 28px;
+    width: 0px;
+    height: 18px;
+}
+.skills:nth-child(1):hover::after{
+    content: "75%";
+    width: 175px;
+    top: 38px;
+    color:#fefefede;
+    border-radius: 2px;
+       
+}
+.skills:nth-child(2):hover::after{
+    content: "65%";
+    width: 165px; 
+
+}
+.skills:nth-child(3):hover::after{
+    content: "65%";
+    width: 165px;
+}
+.skills:nth-child(4):hover::after{
+    content: "60%";
+    width: 160px;
+}
+.skills:nth-child(5):hover::after{
+    content: "60%";
+    width: 160px;
+}
+
+
+.skills > figcaption{
+    font-size: 13px;
+}
+
+/* .main__datos:nth-child(3) > .datos__info>.skills{
+    
+    text-align: center;
+    color: white;
+    margin-left: 20px;
+    position: relative;
+}
+.main__datos:nth-child(3) > .datos__info>.skills::after{
+    content: "";
+    width: 0px;
+    height: 0px;
+    transition: all 0.3s linear;
+}
+
+.main__datos:nth-child(3) > .datos__info>.skills:hover::after{
+    
+    position: absolute;
+    background-color: rgba(246, 234, 234, 0.52);
+    background-repeat: no-repeat;
+    left:74px;
+    top: 28px;
+    width: 120px;
+    height: 5px;
+} */
+
+.sidebar__profile{
+    padding-top: 25px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+    margin: 10px 10px;
+	align-items: center;
+    font-family: 'Akaya Telivigala', sans-serif;
+}
+.img__perfil{
+    
+    height: 400px;
+	width: 400px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid #2b6c97;
+    border-radius: 8px;
+    box-shadow: 0px 0px 7px #fefefe;
+	overflow: hidden;
+	transition: height,width 0.3s linear;
+
+    
+}
+.img__perfil > img{
+    max-width: 100%;
+  
+}
+
+.personal__info > h2{
+    color: #fefefed2;
+}
+
+h2{
+    font-family: 'Akaya Telivigala', sans-serif;
+    
+}
+h3{
+    font-family: sans-serif;
+}
+.personal__info > p,li{
+    font-size: 20px;
+    color: #dddddd;
+}
+
+.personal__info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 30px 0px;
+}
+
+.personal__info > ul > li{
+    list-style-type: none;
+    padding: 5px 0px;
+}
+.personal__info > ul > li::before{
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0e0";
+    margin: 0px 20px;
+}
+
+
+.personal__info figure a{
+    font-size: 28px;
+    padding: 0px 15px;
+    text-decoration: none;
+    color: #03192c;
+    transition: all 0.3s linear;
+    
+}
+.personal__info figure a:hover{
+    font-size: 48px;
+    box-shadow: 0px 0px 5px #e0dddd;
+    padding:10px 10px;
+    margin: 0px 25px;
+    background-color: rgba(165, 165, 165, 0.2);
+    color: #fefefe;
+    
+}
+.footer{
+    height: 120px;
+    max-width: 100%;
+    background-color: #03192c;
+    color: #e0dddd;
+    font-size: 30px;
+    font-family: 'Akaya Telivigala', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s linear;
+    filter: blur(5px);
+}
+
+.footer > p{
+    position: absolute;
+    font-size: 30px;
+    right: 17%;
+    bottom: 5%;
+    
+}
+
+.footer:hover{
+    font-size:35px;
+    text-transform: uppercase;
+    filter: blur(0);
+}
+@media (max-width:1770px){
+    .main__datos:nth-child(3){
+        width: 0;
+        border: none;
+        
+    }
+    .main__datos{
+        width: 0;
+        border: none;
+       
+    }
+   
+
+    .img__perfil{
+        width: 300px;
+        height: 300px;
+    }
+
+    .sidebar{
+        padding: 10px 50px;
+    }
+    .main__datos:nth-child(3) > .datos__info:hover{
+        width: 280px;
+        
+        
+    }
+    .main__datos:nth-child(3){
+        margin-left: 200px;
+      
+    }
+   
+    .skills:nth-child(1):hover::after{
+        content: "75%";
+        width: 145px;
+        top: 38px;
+        color:#fefefede;
+        border-radius: 2px;
+           
+    }
+    .skills:nth-child(2):hover::after{
+        content: "65%";
+        width: 135px; 
+    
+    }
+    .skills:nth-child(3):hover::after{
+        content: "65%";
+        width: 135px;
+    }
+    .skills:nth-child(4):hover::after{
+        content: "60%";
+        width: 130px;
+    }
+    .skills:nth-child(5):hover::after{
+        content: "60%";
+        width: 130px;
+    }
+    .title:nth-child(1){
+        margin-top: 0%;
+        margin-left: -5%;
+      
+    }
+    .title:nth-child(2){
+        margin-top: -15%;
+        margin-left: -25%;
+      
+    }
+    .datos__info{
+     margin-left: -150px;
+      
+    }
+
+}
+
+.btn__menu {
+	outline: none;
+	padding: 10px 10px;
+	border: 1px solid #332e23;
+	color: #332e23;
+	background-color: transparent;
+	border-radius: 2px;
+	display: none;
+}
+
+
+
+@media (max-width:1440px){
+    .main__container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     
+    }
+    .main{
+        margin-top: 100px;
+        margin-bottom: -100px;
+    }
+    .titles{
+        position: relative;
+    }
+    .title:nth-child(1){
+      
+       display: none;
+      
+    }
+    .title:nth-child(2){
+      
+        display: none;
+      
+    }
+    .main__datos{
+        margin-top: 20px;
+        
+    }
+    .sidebar{
+        padding: 0px 50px;
+        height: 900px;
+    }
+  
+    .main__datos:nth-child(3) > .datos__info{
+        position: absolute;
+        top: 50%;
+        left: 43%;
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 380px;
+        height: 320px;
+        
+    }
+    
+   
+    .skills:hover::after{
+       display: none;
+    }
+}
+
+
+
+
+
+@media (max-width:1024px){
+    .main{
+        max-height: 100vh;
+        padding-top: 80px;
+    }
+    .sidebar{
+        height: 500px;
+    }
+    .sidebar::before{
+        content: "ANGEL VARGAS MAHANEY";
+        position: absolute;
+        font-family: 'Akaya Telivigala', sans-serif;
+        top: -10%;
+        color: #fefefe;
+        font-size: 25px;
+        left: 50%;
+        width: 300px;
+        
+        transform: translate(-50%,0);
+    }
+    .datos__info::before{
+        content: "Habilidades";
+        position: absolute;
+        font-family: 'Akaya Telivigala', sans-serif;
+        top: -20%;
+        color: #fefefe;
+        font-size: 25px;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+    .sidebar__profile{
+        display: none;
+    }
+    .datos__info{
+        display: none;
+    }
+    .main__datos:nth-child(3) > .datos__info{
+        position: absolute;
+        top: 10%;
+        
+    }
+   .header__info > p i{
+       display: none;
+   }
+ 
+}
+
+@media (max-width:870px){
+    
+    .main{
+        width: 100%;
+        position: relative;
+    }
+    .sidebar__profile > h1{
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    .sidebar{
+        height: 750px;
+        position: absolute;
+        left: 45%;
+        transform: translate(-50%,0);
+        
+        margin-top: -100px;
+    }
+    .sidebar::before{
+        content: "";
+    }
+    .sidebar__profile{
+        display: unset;
+    }
+    .main__datos:nth-child(3) > .datos__info{
+        display: none;
+    }
+    .personal__info{
+        gap: 15px;
+    }
+   
+    .footer > em{
+        font-size: 20px;
+    }
+    .footer > p{
+        font-size: 15px;
+    }
+   
+    .header__info{
+        display: none;
+    }
+    .header__nav{
+     
+        margin: 0 auto;
+    }
+    
+}
+
+
+@media (max-width:600px){
+    .main{
+        width: 250px;
+        display: flex;
+        margin: 0 auto;
+    }
+    .sidebar{
+        margin-top: 30px;
+        width: 300px;
+    }
+    .img__perfil{
+        width: 170px;
+        height: 170px;
+    }
+    .personal__info{
+      gap: 30px;
+      font-size: 18px;
+    }
+    .personal__info h2,p{
+        font-size: 20px;
+    }
+    .personal__info > ul li{
+        font-size: 17px;
+    }
+    .personal__info figure a{
+        font-size: 28px;
+        padding: 0px 5px;
+        text-decoration: none;
+        color: #03192c;
+        transition: all 0.3s linear;
+        
+    }
+}

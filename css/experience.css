@@ -1,0 +1,545 @@
+*{
+    margin:0;
+    box-sizing:border-box;
+    padding:0;
+}
+
+
+body{
+    background-color: #013A6B;
+    background-image: -webkit-linear-gradient(30deg, #ffffffc0 50%, #19588f 50%);
+    font-family: sans-serif;
+}
+
+.header {
+	height: 60px;
+    padding: 40px 0px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+    padding-right: 32px;
+    background-color: #063258;
+    
+}
+
+.header__info{
+    font-family: 'Akaya Telivigala', sans-serif;
+    font-size: 35px;
+    color: white;
+    margin: 0 150px;
+}
+
+.header__nav{
+    border: 1px solid #fefefed7;
+    padding: 20px;
+    background-color: rgba(240, 15, 15, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px #fefefe9a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.header__item {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: flex 0.3s ease;
+    
+}
+.header__item:hover {
+	flex: 1.5;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+    border-color: #3d5a74;
+}
+.header__item.active {
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	flex: 1.5;
+    border-color: #fefefe;
+}
+
+.header__list{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+   list-style: none;
+  
+   
+}
+.header__link{
+    text-decoration: none;
+    color: #fefefeda;  
+    font-family: 'Akaya Telivigala', sans-serif;;
+    
+}
+
+.main{
+    
+    display: flex;
+    min-height: calc(100vh - 60px);
+    gap: 15px;
+  
+}
+.sidebar {
+	flex: 0.7;
+	border: 1px solid white;
+    /* background-color: rgba(134, 134, 134, 0.253); */
+    background-color: #3b6083;
+    box-shadow: 0px 0px 18px #aca8a8;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+	transition: width 0.3s linear; 
+    position: relative;
+}
+
+.main__container{
+    flex: 2;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    margin-right: 35px;
+    background-color: rgba(255, 255, 255, 0.952);
+    box-shadow: 0px 0px 18px #3b6083;
+    gap: 90px;
+    transition: all 0.5s linear;
+    
+}
+
+.personal__info > h2{
+    color: #fefefed2;
+}
+
+.personal__info > p,li{
+    font-size: 18px;
+    color: #dddddd;
+}
+
+.personal__info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  margin: 100px 0px;
+
+}
+h2{
+    font-family: 'Akaya Telivigala', sans-serif;
+    
+}
+.header__info > p i{
+    display: unset;
+    transition: all 0.5s linear;
+}
+
+.personal__info h2:nth-child(1):before{
+    content: "";
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f2a0"; 
+    margin: 0px 20px;
+}
+.personal__info h2:nth-child(3):before{
+    content: "";
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f1d8"; 
+    margin: 0px 20px;
+}
+.personal__info h2:nth-child(5):before{
+    content: "";
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0c0"; 
+    margin: 0px 20px;
+}
+
+.personal__info > ul > li{
+    list-style-type: none;
+    padding: 5px 0px;
+}
+.personal__info > ul > li::before{
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0e0";
+    margin: 0px 20px;
+}
+
+.personal__info figure a{
+    font-size: 28px;
+    padding: 0px 15px;
+    text-decoration: none;
+    color: #03192c;
+    transition: all 0.3s linear;
+    
+}
+.personal__info figure a:hover{
+    font-size: 48px;
+    box-shadow: 0px 0px 5px #e0dddd;
+    padding:10px 10px;
+    margin: 0px 25px;
+    background-color: rgba(165, 165, 165, 0.2);
+    color: #fefefe;
+    
+}
+
+
+
+.experience__globes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.2;
+    
+}
+
+.padre {
+	height: 70%;
+	width: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+    gap: 25px;
+    
+    flex-direction: column;
+    transition: all 0.5s linear;
+}
+.numero {
+	width: 60px;
+	height: 50px;
+	background-color: #5c5c5c;
+	border-radius: 50%;
+    
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: sans-serif;
+    transition: all 0.5s linear;
+}
+
+.numero:nth-child(1){
+    background-color: #3b6083;
+}
+
+.numero a{
+    color: white;
+    text-decoration: none;
+}
+
+.padre::before {
+	content: "";
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: calc(50% - 1px);
+	border-left: 2px solid #5882aa;
+	z-index: -1;
+    transition: all 0.5s linear;
+}
+
+.clas1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 150px;
+    border-radius: 8px;
+    background-color: rgba(165, 165, 165, 0.2);
+    transition: all 0.5s linear;
+    box-shadow: 0px 0px 5px #11518da2;
+    text-align: justify;
+    
+}
+
+.clas1:hover{
+    width: 800px;
+    height: 150px;
+   margin-left: 100px;
+   background-color: rgba(174, 209, 243, 0.842);;
+
+}
+
+.clas1::before{
+    content: "";
+    width: 0;
+    height: 0;
+    transition: width  0.7s linear;
+   
+}
+.figu{
+    height: 130px;
+    width: 160px;
+    margin-right: 20px;
+    
+ 
+}
+
+.figu > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    transition: transform  0.7s linear;
+ 
+}
+.figu img:hover{
+    width: 190px;
+    transform: scale(1.5);
+    padding-left: 30px;
+}
+
+
+.clas1:hover::before{
+    content: "";
+    position: absolute;
+    background: url(./../images/releng_corp.png);
+    background-size: contain;
+    border: 1px solid #eee;
+    box-shadow: 0px 0px 8px #776f6f;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #bdb4b4;
+   
+      
+    
+    left:34px;
+    top: 90px;
+    width: 100px;
+    height: 150px;
+}
+
+.clas1:nth-child(2):hover::before{
+    position: absolute;
+    border: 1px solid #86483d;
+    box-shadow: 0px 0px 8px #d81a1a8a;
+    background: url(./../images/soon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    left:34px;
+    
+    top: 329px;
+    width: 100px;
+    height: 150px;
+}
+.clas1:nth-child(3):hover::before{
+    position: absolute;
+
+    border: 1px solid #86483d;
+    box-shadow: 0px 0px 8px #d81a1a8a;
+    background: url(./../images/soon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    left:34px;
+    top: 571px;
+    width: 100px;
+    height: 150px;
+}
+
+.clas1 p{
+    margin: 0px 15px;
+}
+
+
+
+.footer{
+    height: 120px;
+    max-width: 100%;
+    background-color: #03192c;
+    color: #e0dddd;
+    font-size: 30px;
+    font-family: 'Akaya Telivigala', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s linear;
+    filter: blur(5px);
+}
+
+.footer > p{
+    position: absolute;
+    font-size: 30px;
+    right: 17%;
+    bottom: 5%;
+    
+}
+
+.footer:hover{
+    font-size:35px;
+    text-transform: uppercase;
+    filter: blur(0);
+}
+
+@media(max-width:1600px){
+    .clas1{
+        width: 550px;
+        margin: 0px 15px;
+       
+    }
+    
+
+    
+   
+    .clas1:hover{
+        width: 650px;
+        height: 150px;
+       margin-left: 100px;
+       background-color: rgba(174, 209, 243, 0.842);;
+    
+    }
+    .figu img:hover{
+        width: 190px;
+        transform: scale(1.2);
+        padding-left: 30px;
+    }
+   
+}
+
+@media(max-width:1440px){
+    .clas1{
+        width: 350px;
+        margin: 0px 15px;
+       
+    }
+    
+    .clas1:hover{
+        width: 300px;
+        height: 150px;
+       margin-left: 100px;
+       background-color: rgba(174, 209, 243, 0.842);;
+    
+    }
+    .figu img{
+        display: none;
+    }
+}
+
+@media(max-width:1024px){
+
+    .clas1{
+        background-color: rgba(230, 228, 228, 0.931);
+    }
+    .clas1::before{
+        display: none;
+    }
+    .clas1:hover::before{
+        display: none;
+    }
+    .clas1:hover{
+        width: 300px;
+        height: 150px;
+        margin-left: 0;
+    }
+    .figu{
+        display: none;
+    }
+    .main__container{
+        background-color: rgba(255, 255, 255, 0.692);
+
+    }
+}
+
+@media(max-width:890px){
+    .header__info>p i{
+       display: none;
+    }
+
+    .padre{
+        display: none;
+    }
+}
+
+@media(max-width:870px){
+    .header__info{
+        display: none;
+    }
+    .header__nav{
+     
+        margin: 0 35%;
+    }
+
+    .clas1{
+        width: 150px;
+        height: 150px;
+    }
+    .clas1 p{
+        display: none;
+    }
+
+    .clas1:nth-child(1){
+        background:url(./../images/releng_corp.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .clas1:nth-child(2){
+        background:url(./../images/soon.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .clas1:nth-child(3){
+        background:url(./../images/soon.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .main__container{
+        background-color: #fefefef6;
+    }
+    .personal__info{
+        gap: 80px;
+        padding: 10px 10px;
+    }
+    .clas1:hover{
+        width: 100px;
+        height: 150px;
+        margin-left: 0;
+    }
+    .sidebar::before{
+        content: "ANGEL VARGAS MAHANEY";
+        position: absolute;
+        font-family: 'Akaya Telivigala', sans-serif;
+        top: 2%;
+        color: #fefefe;
+        font-size: 25px;
+        left: 55%;
+        width: 300px;
+        
+        transform: translate(-50%,0);
+    }
+}
+
+@media(max-width:480px){
+
+    .main__container{
+        display: none;
+     
+    }
+   
+    .header{
+        display: flex;
+        justify-content: center;
+    }
+    .sidebar{
+        position: absolute;
+        left: -7%;
+    }
+
+    .footer > em{
+        font-size: 20px;
+    }
+    .footer > p{
+        font-size: 15px;
+    }
+}
